@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html ng-app="mymodule">
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src= "script2.js"></script>
+    </head>
+    <body ng-controller= "mycontroller">
+       Country: {{country.countryName}}<br>
+       Capital: {{country.capital}}<br>
+        <div >
+            <img ng-src ="{{country.flag}}"
+            alt="{{country.countryName+ 'Flag'}}"
+            style="height:100px;width:200px"/>
+        </div>
+    </body>
+</html>

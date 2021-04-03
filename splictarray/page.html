@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+ <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+<script src="//code.angularjs.org/snapshot/angular.min.js"></script>
+  <script src="script.js"></script>
+</head>
+<body ng-app="list" ng-controller="ListController" class="container">
+  <div class="container">
+    <h2>List of Data</h2>
+    <form name="myForm" ng-controller="ListController">
+      <div class="form-group">
+        <label for="email">Name:</label>
+        <input name="namesInput" class="form-control" ng-model="$parent.names" ng-list>
+      </div>
+  
+    </form>
+    <hr>
+    <button type="button" class="btn btn-success"value="Click Here" ng-click ="getfun()">Submit</button>
+  </div>
+  <br>
+ <table class="table table-bordered">
+  <thead>
+      <th>Name</th>
+      <th>Count</th>
+  </thead >
+  <tbody>
+      <tr ng-repeat="item in data">
+          <td>{{item.name}}</td>
+          <td>{{item.count}}</td>
+      </tr>
+  </tbody>
+</table>
+<!-- <br />
+<br><br>
+ Names: <strong>{{unique_names}}</strong>
+ <br />
+ Counts: <strong>{{names_count}}</strong> -->
+</body>
+</html>

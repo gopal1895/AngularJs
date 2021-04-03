@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en"  ng-app="MyModules">
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src= "Script.js"></script>
+</head>
+<body >
+   <div >
+      10+20 = {{10+20}}
+      {{1==1}}
+      <br>
+      20+40 = {{20+40}}
+   </div>
+   <div>
+    {{ ['gopal','sara','mohit'][2] }}
+       <br>
+  
+ </div>
+ <div>
+    {{ {name: 'Gopal',age: '22',address: 'Delhi'}.address }}
+ </div>
+ <!-- <div ng-controller= "myController">
+   {{ message }}
+ </div> -->
+ <br>
+ <div ng-controller= "MyControllers">
+    {{ employee.firstName }}<br>
+    {{ employee.lastName }}<br>
+    {{ employee.gender }}
+  </div>
+</body>
+</html>
